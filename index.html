@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>AltOption.org</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <style>
+  *:focus {
+    outline: none;
+  }
   .full-bleed {
     width: 100vw;
     position: relative;
@@ -16,6 +20,7 @@
   }
   #learn_more {
     position: absolute;
+    cursor: pointer;
     top: 60.25%;
     left: 18%;
     height: 3%;
@@ -28,7 +33,31 @@
     height: 3%;
     width: 20%;
   }
+  #mce-EMAIL {
+    position: absolute;
+    top: 85.5%;
+    left: 16%;
+    height: 7%;
+    width: 36%;
+  }
+  #mc-embedded-submit {
+    position: absolute;
+    cursor: pointer;
+    top: 85.5%;
+    left: 56%;
+    height: 7%;
+    width: 25%;
+  }
   </style>
+  <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+  We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script type="text/javascript">
   (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
   ;r.type="text/javascript"
@@ -55,13 +84,38 @@
             ;e.amplitude=n})(window,document);
 
             amplitude.getInstance().init("3276f66b27e8880398d04823504a40f8");
-          </script>
-        </head>
-        <body>
-          <div class="full-bleed">
-            <img src="./assets/landing.jpg" class="full-bleed" alt="Girl in desert">
-            <a id="learn_more" href="https://www.instagram.com/AltOption_/" onclick="amplitude.getInstance().logEvent('clicked_learn_more')" target="_blank"></a>
-            <a id="visit_now" href="https://www.hipcamp.com/california/altoption-s-adult-sandbox/altoption-s-adult-sandbox" onclick="amplitude.getInstance().logEvent('clicked_visit_now')" target="_blank"></a>
-          </div>
-        </body>
-        </html>
+            </script>
+          </head>
+          <body>
+            <div class="full-bleed">
+              <img src="./assets/landing.jpg" class="full-bleed" alt="Girl in desert">
+              <a id="learn_more" data-toggle="modal" data-target="#learn_more_modal" onclick="amplitude.getInstance().logEvent('clicked_learn_more')" target="_blank"></a>
+              <a id="visit_now" href="https://www.hipcamp.com/california/altoption-s-adult-sandbox/altoption-s-adult-sandbox" onclick="amplitude.getInstance().logEvent('clicked_visit_now')" target="_blank"></a>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="learn_more_modal" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content bg-transparent border-0">
+                  <div class="modal-body">
+                    <div class="">
+                      <img src="./assets/modal.png" class="w-100" alt="Girl with camera">
+                      <!-- Begin Mailchimp Signup Form -->
+                      <div id="mc_embed_signup">
+                        <form action="https://studio.us5.list-manage.com/subscribe/post?u=f8a2462fef15a51fa1db4d941&amp;id=1dae82c475" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                          <div id="mc_embed_signup_scroll">
+                            <input type="email" value="" name="EMAIL" class="email bg-transparent border-0" id="mce-EMAIL" placeholder="" required>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f8a2462fef15a51fa1db4d941_1dae82c475" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="" name="submit" id="mc-embedded-submit" class="border-0 bg-transparent"></div>
+                          </div>
+                        </form>
+                      </div>
+                      <!--End mc_embed_signup-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </body>
+          </html>
