@@ -12,14 +12,15 @@
     outline: none;
   }
   .full-bleed {
+    max-width: 100vw;
     width: 100vw;
     position: relative;
     left: 50%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    margin-top: -2vh;
-    margin-bottom: -2vh;
+    /* margin-top: -2vh; */
+    /* margin-bottom: -2vh; */
   }
   #learn_more {
     position: absolute;
@@ -86,7 +87,7 @@
           </head>
           <body>
             <div class="full-bleed">
-              <img src="./assets/landing.jpg" class="full-bleed" alt="Girl in desert">
+              <img src="./assets/landing.jpg" class="full-bleed" alt="CYBERDELIA flyer">
               <a id="learn_more" data-toggle="modal" data-target="#learn_more_modal" onclick="amplitude.getInstance().logEvent('clicked_learn_more')" target="_blank"></a>
               <a id="visit_now" href="https://www.hipcamp.com/california/altoption-s-adult-sandbox/altoption-s-adult-sandbox" onclick="amplitude.getInstance().logEvent('clicked_visit_now')" target="_blank"></a>
             </div>
